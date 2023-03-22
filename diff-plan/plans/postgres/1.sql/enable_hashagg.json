@@ -1,0 +1,90 @@
+{
+  "Node Type": "Aggregate",
+  "Strategy": "Sorted",
+  "Partial Mode": "Finalize",
+  "Parallel Aware": false,
+  "Async Capable": false,
+  "Startup Cost": 284814.46,
+  "Total Cost": 335110.56,
+  "Plan Rows": 6,
+  "Plan Width": 68,
+  "Group Key": [
+    "returnflag",
+    "linestatus"
+  ],
+  "Plans": [
+    {
+      "Node Type": "Gather Merge",
+      "Parent Relationship": "Outer",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Startup Cost": 284814.46,
+      "Total Cost": 335109.7,
+      "Plan Rows": 30,
+      "Plan Width": 140,
+      "Workers Planned": 5,
+      "Plans": [
+        {
+          "Node Type": "Sort",
+          "Strategy": "Sorted",
+          "Partial Mode": "Partial",
+          "Parent Relationship": "Outer",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Startup Cost": 283814.38,
+          "Total Cost": 334106.01,
+          "Plan Rows": 6,
+          "Plan Width": 140,
+          "Group Key": [
+            "returnflag",
+            "linestatus"
+          ],
+          "Plans": [
+            {
+              "Node Type": "Aggregate",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Startup Cost": 283814.38,
+              "Total Cost": 286772.71,
+              "Plan Rows": 1183331,
+              "Plan Width": 36,
+              "Sort Key": [
+                "returnflag",
+                "linestatus"
+              ],
+              "Plans": [
+                {
+                  "Node Type": "Seq Scan",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": true,
+                  "Async Capable": false,
+                  "Relation Name": "lineitem",
+                  "Alias": "l",
+                  "Startup Cost": 0.0,
+                  "Total Cost": 145497.04,
+                  "Plan Rows": 1183331,
+                  "Plan Width": 36,
+                  "Filter": "(shipdate <= '1998-09-02 00:00:00'::timestamp without time zone)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Node Type": "Sort",
+          "Strategy": "Sorted",
+          "Partial Mode": "Partial",
+          "Parent Relationship": "Outer",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Startup Cost": 283814.38,
+          "Total Cost": 334106.01,
+          "Plan Rows": 6,
+          "Plan Width": 140,
+          "Relation Name": "test"
+        }
+      ]
+    }
+  ]
+}

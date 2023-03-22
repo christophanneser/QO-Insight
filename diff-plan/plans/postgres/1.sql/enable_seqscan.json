@@ -1,0 +1,46 @@
+{
+  "Node Type": "Aggregate",
+  "Strategy": "Sorted",
+  "Partial Mode": "Simple",
+  "Parallel Aware": false,
+  "Async Capable": false,
+  "Startup Cost": 10001060543.07,
+  "Total Cost": 10001312000.92,
+  "Plan Rows": 6,
+  "Plan Width": 68,
+  "Group Key": [
+    "returnflag",
+    "linestatus"
+  ],
+  "Plans": [
+    {
+      "Node Type": "Sort",
+      "Parent Relationship": "Outer",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Startup Cost": 10001060543.07,
+      "Total Cost": 10001075334.7,
+      "Plan Rows": 5916653,
+      "Plan Width": 36,
+      "Sort Key": [
+        "returnflag",
+        "linestatus"
+      ],
+      "Plans": [
+        {
+          "Node Type": "Seq Scan",
+          "Parent Relationship": "Outer",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Relation Name": "lineitem",
+          "Alias": "l",
+          "Startup Cost": 10000000000.0,
+          "Total Cost": 10000205509.19,
+          "Plan Rows": 5916653,
+          "Plan Width": 36,
+          "Filter": "(shipdate <= '1998-09-02 00:00:00'::timestamp without time zone)"
+        }
+      ]
+    }
+  ]
+}
