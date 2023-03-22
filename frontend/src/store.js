@@ -1,0 +1,56 @@
+import { create } from 'zustand';
+import { devtools } from 'zustand/middleware';
+
+const useStore = create(
+  devtools((set) => ({
+    visualizationMode: 'query-centric',
+    setVisualizationMode: (visualizationModeInput) => set(() => ({ visualizationMode: visualizationModeInput }), false, `set visualizationMode ${visualizationModeInput}`),
+    rules: [],
+    setRules: (rulesInput) => set(() => ({ rules: rulesInput }), false, `set rules ${rulesInput}`),
+    ruleOptions: [],
+    setRuleOptions: (ruleOptionsInput) => set(() => ({ ruleOptions: ruleOptionsInput }), false, `set ruleOptions ${ruleOptionsInput}`),
+    mode: 'database',
+    ref: {},
+    setRef: (refInput) => set(() => ({ ref: refInput }), false, `set ref ${refInput}`),
+    benchmarks: {},
+    setBenchmarks: (benchmarksInput) => set(() => ({ benchmarks: benchmarksInput }), false, `set benchmarks ${benchmarksInput}`),
+    setMode: (modeInput) => set(() => ({ mode: modeInput }), false, `set mode ${modeInput}`),
+    database: 'postgres',
+    setDatabase: (databaseInput) => set(() => ({ database: databaseInput, benchmark: '', query: '', selectedQueryForTree1: '', selectedQueryForTree2: '' }), false, `set database ${databaseInput}`),
+    benchmark: '',
+    setBenchmark: (benchmarkInput) => set(() => ({ benchmark: benchmarkInput, query: '', selectedQueryForTree1: '', selectedQueryForTree2: '' }), false, `set benchmark ${benchmarkInput}`),
+    query: '',
+    setQuery: (queryInput) => set(() => ({ query: queryInput, selectedQueryForTree1: '', selectedQueryForTree2: '' }), false, `set query ${queryInput}`),
+    queryOptions: [],
+    setQueryOptions: (queryOptionsInput) => set(() => ({ queryOptions: queryOptionsInput }), false, `set queryOptions ${queryOptionsInput}`),
+    selectedQueryForTree1: '',
+    setSelectedQueryForTree1: (selectedQueryForTreeInput1) => set(() => ({ selectedQueryForTree1: selectedQueryForTreeInput1 }), false, `set selectedQueryForTree1 ${selectedQueryForTreeInput1}`),
+    selectedQueryForTree2: '',
+    setSelectedQueryForTree2: (selectedQueryForTreeInput2) => set(() => ({ selectedQueryForTree2: selectedQueryForTreeInput2 }), false, `set selectedQueryForTree2 ${selectedQueryForTreeInput2}`),
+    latency: 100,
+    setLatency: (latencyInput) => set(() => ({ latency: latencyInput }), false, `set latency ${latencyInput}`),
+    processedRows: 0,
+    setProcessedRows: (processedRowsInput) => set(() => ({ processedRows: processedRowsInput }), false, `set processedRows ${processedRowsInput}`),
+    io: 0,
+    setIO: (ioInput) => set(() => ({ io: ioInput }), false, `set io ${ioInput}`),
+    spills: 0,
+    setSpills: (spillsInput) => set(() => ({ spills: spillsInput }), false, `set spills ${spillsInput}`),
+    labelBarchart: "Latency Improvement [%]",
+    setLabelBarchart: (labelBarchartInput) => set(() => ({ labelBarchart: labelBarchartInput }), false, `set labelBarchart ${labelBarchartInput}`),
+    aggregatedQueries: [],
+    setAggregatedQueries: (aggregatedQueriesInput) => set(() => ({ aggregatedQueries: aggregatedQueriesInput }), false, `set aggregatedQueries ${aggregatedQueriesInput}`),
+
+    flushStore: () => set(() => ({
+      mode: 'database',
+      benchmarks: {},
+      database: 'postgres',
+      benchmark: '',
+      query: '',
+      queryOptions: [],
+      selectedQueryForTree1: '',
+      selectedQueryForTree2: '',
+    }), false, 'flush store'),
+  }), { name: 'Store Add State' }),
+);
+
+export default useStore;

@@ -1,0 +1,8 @@
+{
+    "baseURL": "http://localhost:2583",
+    "databases": [
+        "postgres",
+        "presto"
+    ],
+    "showConnect": false
+}

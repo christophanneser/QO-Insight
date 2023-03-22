@@ -1,0 +1,77 @@
+{
+  "name": "autosteer-demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.4",
+    "@mui/styled-engine": "^5.11.0",
+    "@mui/styles": "^5.11.2",
+    "@mui/x-data-grid": "^6.0.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "axios": "^1.2.2",
+    "chart.js": "^4.2.0",
+    "crypto-browserify": "^3.12.0",
+    "d3": "^7.8.1",
+    "d3-axis": "^3.0.0",
+    "d3-scale": "2.1.0",
+    "d3-selection": "^3.0.0",
+    "d3-transition": "^3.0.1",
+    "path-browserify": "^1.0.1",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-d3-tree": "^3.5.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.7.1",
+    "react-katex": "^3.0.1",
+    "react-latex": "^2.0.0",
+    "react-latex-next": "^2.2.0",
+    "react-pro-sidebar": "^1.0.0-beta.2",
+    "react-router-dom": "^6.9.0",
+    "react-scripts": "5.0.1",
+    "react-tree-graph": "^8.0.1",
+    "react-wasm": "^1.0.1",
+    "web-vitals": "^2.1.0",
+    "zustand": "^4.3.2"
+  },
+  "scripts": {
+    "start": "./fix-webpack-issue.sh && PORT=3001 react-scripts start",
+    "build": "./fix-webpack-issue.sh && react-scripts build",
+    "test": "./fix-webpack-issue.sh && react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^8.31.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.4",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.2"
+  }
+}

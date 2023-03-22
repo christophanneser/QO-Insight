@@ -1,0 +1,48 @@
+.query-plan-svg {
+    background-color: white;
+}
+
+.query-plan-node {
+    font-size: 14px;
+    font-weight: bold;
+    fill: #fff;
+    stroke: #000;
+    stroke-width: 2px;
+}
+
+.query-plan-path {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1px;
+}
+
+.parent-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.node__root>circle {
+    fill: red;
+}
+
+.node__branch>circle {
+    fill: yellow;
+}
+
+.node__leaf>circle {
+    fill: green;
+    /* Let's also make the radius of leaf nodes larger */
+    r: 40;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+div.queryInfo {
+    position: relative;
+    left: 30px;
+    width: 100vh;
+    height: 0px;
+}

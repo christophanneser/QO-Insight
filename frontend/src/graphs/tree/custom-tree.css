@@ -1,0 +1,51 @@
+/* custom-tree.css */
+
+.node__root>circle {
+    fill: red;
+}
+
+.node__standard>circle {
+    fill: grey;
+}
+
+.node__matched>circle {
+    fill: grey;
+}
+
+.node__unmatched>circle {
+    fill: rgba(256,0,0,0.4);
+}
+
+.node__over>circle {
+    fill: orange;
+}
+
+.node__leaf>circle {
+    fill: green;
+    r: 40;
+}
+
+.node__root>rect {
+    fill: red;
+}
+
+.node__standard>rect {
+    fill: grey;
+}
+
+.node__matched>rect {
+    fill: whitesmoke;
+}
+
+.node__unmatched>rect {
+    fill: #D32F2F;
+    color: green;
+}
+
+.node__over>rect {
+    fill: #1976D2;
+}
+
+.node__leaf>rect {
+    fill: green;
+}

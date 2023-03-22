@@ -1,0 +1,16 @@
+.parent-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+div.queryInfo {
+    position: relative;
+    left: 30px;
+    width: 100vh;
+    height: 0px;
+}
